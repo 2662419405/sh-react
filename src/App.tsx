@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Button, { ButtonType, ButtonSize } from "./components/Button/button";
+import Menu from "./components/Menu/menu";
+import MenuItem from "./components/Menu/menuItem";
 import Axios from "./utils/sh-axios";
 
 interface Props {}
@@ -30,19 +32,36 @@ export default class App extends Component<Props, State> {
     const { list } = this.state;
     return (
       <div>
-        123
-        <code>测试</code>
-        <h1>标题</h1>
-        <Button
-          size={ButtonSize.Large}
-          btnType={ButtonType.Danger}
-          onClick={this.getMockData}
-        >
-          获取数据
-        </Button>
-        {list.map((v: { address: string }, i) => {
-          return <div key={i}>{v.address}</div>;
-        })}
+        <code>样式测试</code>
+        <div>
+          <h1>按钮组</h1>
+          <Button
+            size={ButtonSize.Large}
+            btnType={ButtonType.Danger}
+            onClick={this.getMockData}
+          >
+            获取数据
+          </Button>
+          <Button size={ButtonSize.Small} btnType={ButtonType.Primary}>
+            按钮
+          </Button>
+          <Button
+            size={ButtonSize.Large}
+            btnType={ButtonType.Link}
+            href="http://www.baidu.com"
+          >
+            按钮
+          </Button>
+          <Menu>
+            {list.map((v: { address: string }, i) => {
+              return (
+                <MenuItem index={i} disabled={true}>
+                  {v.address}
+                </MenuItem>
+              );
+            })}
+          </Menu>
+        </div>
       </div>
     );
   }
