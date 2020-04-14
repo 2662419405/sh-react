@@ -4,3 +4,10 @@
 
 - [x] axios封装
 - [x] Button组件完成
+- [x] Menu菜单组件
+- [x] autoComplete自动输入组件
+- [x] Upload上传文件组件
+
+## 使用
+
+`npm i sh-react --save`

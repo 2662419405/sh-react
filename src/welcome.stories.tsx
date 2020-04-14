@@ -10,8 +10,6 @@ storiesOf("Welcome page", module).add(
         <p>sh-react 是模仿antd库去设计和练习的一款UI库,针对于React的用户</p>
         <h3>npm 安装</h3>
         <code>npm install sh-react --save</code>
-        <br />
-        需要在全局文件导入默认样式
       </>
     );
   },
