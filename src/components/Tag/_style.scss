@@ -1,0 +1,49 @@
+.sh-tag {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: $tag-font-size;
+  font-variant: tabular-nums;
+  line-height: $tag-font-line;
+  list-style: none;
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
+  display: inline-block;
+  height: auto;
+  margin-right: 8px;
+  padding: 0 7px;
+  line-height: $tag-line-height;
+  white-space: nowrap;
+  background: #fafafa;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: $default-transition;
+  transition: $default-transition;
+  .antion-close {
+    display: inline-block;
+    font-size: $tag-close-size;
+    margin-left: 3px;
+    color: rgba(0, 0, 0, 0.45);
+    font-weight: $font-weight-bold;
+    cursor: pointer;
+    -webkit-transition: $default-transition;
+    transition: $default-transition;
+  }
+  &.sh-tag-hide {
+    display: none;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &.sh-tag-has-color {
+    color: #ffffff;
+    border-color: transparent;
+    .antion-close{
+      color: #ffffff;
+    }
+  }
+}
