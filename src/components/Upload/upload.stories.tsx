@@ -37,5 +37,5 @@ const SimpleUpload = () => {
   )
 }
 
-storiesOf('Upload component', module)
-  .add('Upload', SimpleUpload)
+storiesOf('Upload 文件上传', module)
+  .add('默认 Upload', SimpleUpload)
