@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button, { ButtonType, ButtonSize } from "./components/Button/button";
 import Menu from "./components/Menu/menu";
 import MenuItem from "./components/Menu/menuItem";
+import SubMenu from "./components/Menu/subMenu";
 import Axios from "./utils/sh-axios";
 
 interface Props {}
@@ -52,14 +53,12 @@ export default class App extends Component<Props, State> {
           >
             按钮
           </Button>
-          <Menu>
-            {list.map((v: { address: string }, i) => {
-              return (
-                <MenuItem index={i} disabled={true}>
-                  {v.address}
-                </MenuItem>
-              );
-            })}
+          <Menu mode="vertical">
+            <SubMenu title="标题">
+              {list.map((v: { address: string }, i) => {
+                return <MenuItem key={i}>{v.address}</MenuItem>;
+              })}
+            </SubMenu>
           </Menu>
         </div>
       </div>
