@@ -25,4 +25,4 @@ export const colorTag = () => (
 
 storiesOf("Tag 标签", module)
   .add("默认的标签", defaultTag)
-  .add("不同颜色的tag", colorTag);
+  .add("不同颜色的标签", colorTag);

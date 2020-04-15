@@ -1,12 +1,12 @@
 {
   "name": "sh-react",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "React components library",
   "author": "sunhang32",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "http://shstudy.top/",
+  "homepage": "http://2pz8cm.coding-pages.com/",
   "keywords": [
     "Component",
     "UI",
