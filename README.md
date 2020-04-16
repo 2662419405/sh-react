@@ -10,6 +10,7 @@
 - [x] autoComplete自动输入组件
 - [x] Upload上传文件组件
 - [x] tag标签
+- [x] Icon
 
 ## 计划
 

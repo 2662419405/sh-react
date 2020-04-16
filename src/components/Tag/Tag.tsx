@@ -6,15 +6,30 @@ export interface TagProps {
   closable?: boolean;
   className?: string;
   color?: string;
+  onClose?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
+  visible?: boolean;
 }
 
-type BaseProps = BaseHTMLAttributes<HTMLElement>
-export type TagsProps = TagProps & BaseProps
+type BaseProps = BaseHTMLAttributes<HTMLElement>;
+export type TagsProps = TagProps & BaseProps;
 
 const Tag: FC<TagsProps> = (props) => {
-  const { className, closable, children, color, ...restProps } = props;
+  const {
+    className,
+    onClose,
+    visible,
+    closable,
+    children,
+    color,
+    ...restProps
+  } = props;
   const [hide, setHide] = useState(false);
-  const handleHideTags = () => {
+  const handleHideTags = (
+    event: React.MouseEvent<SVGSVGElement, MouseEvent>
+  ) => {
+    if (onClose) {
+      onClose(event);
+    }
     setHide(true);
   };
   const classes = classNames(
@@ -24,7 +39,7 @@ const Tag: FC<TagsProps> = (props) => {
       "sh-tag-has-color": color,
     },
     {
-      "sh-tag-hide": hide,
+      "sh-tag-hide": visible || hide,
     }
   );
   return (
@@ -41,6 +56,7 @@ const Tag: FC<TagsProps> = (props) => {
 
 Tag.defaultProps = {
   closable: false,
+  visible: false,
 };
 
 export default Tag;

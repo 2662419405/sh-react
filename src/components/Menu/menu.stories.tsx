@@ -12,29 +12,33 @@ export const defaultMenu = () => (
       action(`clicked ${index} item`);
     }}
   >
-    <MenuItem>cool link</MenuItem>
-    <MenuItem disabled>disabled</MenuItem>
-    <MenuItem>cool link 2</MenuItem>
+    <MenuItem key={1}>cool link</MenuItem>
+    <MenuItem key={2} disabled>
+      disabled
+    </MenuItem>
+    <MenuItem key={3}>cool link 2</MenuItem>
   </Menu>
 );
 
 export const VertivalMenu = () => (
   <Menu mode="vertical">
-    <MenuItem>cool link</MenuItem>
-    <MenuItem>cool link</MenuItem>
-    <MenuItem>cool link 2</MenuItem>
+    <MenuItem key={1}>cool link</MenuItem>
+    <MenuItem key={2}>cool link</MenuItem>
+    <MenuItem key={3}>cool link 2</MenuItem>
   </Menu>
 );
 
 export const DropDownMenu = () => (
   <Menu>
-    <MenuItem>active</MenuItem>
-    <MenuItem disabled>disabled</MenuItem>
-    <MenuItem>xyz</MenuItem>
-    <SubMenu title="dropdown">
+    <MenuItem key={1}>active</MenuItem>
+    <MenuItem key={2} disabled>
+      disabled
+    </MenuItem>
+    <MenuItem key={3}>xyz</MenuItem>
+    <SubMenu key={1} title="dropdown">
       <MenuItem>drop1</MenuItem>
     </SubMenu>
-    <SubMenu title="opened">
+    <SubMenu key={2} title="opened">
       <MenuItem>opened1</MenuItem>
     </SubMenu>
   </Menu>

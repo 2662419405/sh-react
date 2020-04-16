@@ -1,6 +1,6 @@
 {
   "name": "sh-react",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "React components library",
   "author": "sunhang32",
   "main": "dist/index.js",
