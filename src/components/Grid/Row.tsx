@@ -5,10 +5,10 @@ interface IProps {
   className?: string;
 }
 
-const Row: React.FC<IProps> = (props) => {
-  const { className } = props;
+export const Row: React.FC<IProps> = (props) => {
+  const { className, children } = props;
   const classes = classNames("sh-row", className);
-  return <div className={classes}></div>;
+  return <div className={classes}>{children}</div>;
 };
 
 export default Row;

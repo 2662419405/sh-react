@@ -6,12 +6,12 @@ interface IProps {
   span?: number;
 }
 
-const Col: React.FC<IProps> = (props) => {
-  const { className, span } = props;
+export const Col: React.FC<IProps> = (props) => {
+  const { className, span, children } = props;
   const classes = classNames("sh-col", className, {
     [`sh-col-${span}`]: span,
   });
-  return <div className={classes}></div>;
+  return <div className={classes}>{children}</div>;
 };
 
 export default Col;

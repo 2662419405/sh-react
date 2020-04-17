@@ -52,6 +52,9 @@ $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-root:              null !default;
 
+//栅格系统
+$shan-size:                   24 !default;
+
 // Transition
 $default-transition:          all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 

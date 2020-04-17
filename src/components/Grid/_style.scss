@@ -6,4 +6,18 @@
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  > .sh-col {
+    position: relative;
+    max-width: 100%;
+    min-height: 1px;
+  }
+  @for $i from 1 to $shan-size {
+    .sh-col-#{$i} {
+      display: block;
+      flex: 0 0 $i/24 * 100%;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 $i/24 * 100%;
+      max-width: $i/24 * 100%;
+    }
+  }
 }
