@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Col from "./Col";
-import Row from "./Row";
+import { Col } from "./Col";
+import { Row } from "./Row";
 
 export const defaultGrid = () => (
   <>
